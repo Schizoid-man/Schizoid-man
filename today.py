@@ -474,21 +474,20 @@ def svg_overwrite(filename, age_data, commit_data, star_data, repo_data, contrib
     Parse SVG files and update elements with my age, commits, stars, repositories, and lines written
     """
     svg = minidom.parse(filename)
-    f = open(filename, mode='w', encoding='utf-8')
     tspan = svg.getElementsByTagName('tspan')
 
-    tspan[3].firstChild.data = age_data
-    tspan[62].firstChild.data = repo_data
-    tspan[64].firstChild.data = contrib_data
-    tspan[67].firstChild.data = commit_data
-    tspan[69].firstChild.data = star_data
-    tspan[71].firstChild.data = follower_data
-    tspan[74].firstChild.data = loc_data[2]
-    tspan[75].firstChild.data = loc_data[0] + '++'
-    tspan[76].firstChild.data = loc_data[1] + '--'
+    tspan[28].firstChild.data = age_data  # Index adjusted to match age data position
+    tspan[60].firstChild.data = repo_data
+    tspan[62].firstChild.data = contrib_data
+    tspan[65].firstChild.data = commit_data
+    tspan[67].firstChild.data = star_data
+    tspan[69].firstChild.data = follower_data
+    tspan[72].firstChild.data = loc_data[2]
+    tspan[73].firstChild.data = loc_data[0] + '++'
+    tspan[74].firstChild.data = loc_data[1] + '--'
 
-    f.write(svg.toxml('utf-8').decode('utf-8'))
-    f.close()
+    with open(filename, mode='w', encoding='utf-8') as f:
+        f.write(svg.toxml())
 
 
 def commit_counter(comment_size):
