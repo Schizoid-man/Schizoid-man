@@ -289,13 +289,17 @@ def add_archive():
         added_loc += int(loc[0])
         deleted_loc += int(loc[1])
     
+    
     if len(old_data) > 0:
         my_commits_line = old_data[-1].split()
+        # Check if the last line has at least 5 elements after splitting
         if len(my_commits_line) >= 5:
             my_commits = my_commits_line[4][:-1]
         else:
+            
             my_commits = "0"
     else:
+        
         my_commits = "0"
 
     return [added_loc, deleted_loc, added_loc - deleted_loc, my_commits, contributed_repos]
