@@ -288,7 +288,16 @@ def add_archive():
         repo_hash, total_commits, my_commits, *loc = line.split()
         added_loc += int(loc[0])
         deleted_loc += int(loc[1])
-    my_commits = old_data[-1].split()[4][:-1]
+    
+    if len(old_data) > 0:
+        my_commits_line = old_data[-1].split()
+        if len(my_commits_line) >= 5:
+            my_commits = my_commits_line[4][:-1]
+        else:
+            my_commits = "0"
+    else:
+        my_commits = "0"
+
     return [added_loc, deleted_loc, added_loc - deleted_loc, my_commits, contributed_repos]
 
 def force_close_file(data, cache_comment):
