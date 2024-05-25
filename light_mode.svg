@@ -59,8 +59,8 @@ text, tspan {white-space: pre;}
   
 <tspan x="370" y="450" class="keyColor">101    </tspan>:
 <tspan x="370" y="470">8 </tspan>
-<tspan x="370" y="490" class="keyColor">2</tspan>: <tspan class="valueColor">5 </tspan> {<tspan class="keyColor">107    </tspan>: <tspan class="valueColor">8 </tspan>}  | <tspan class="keyColor">108    </tspan>: <tspan class="valueColor">-3,834</tspan>| <tspan class="keyColor">2</tspan>: <tspan class="valueColor">7,505--</tspan>
-<tspan x="370" y="510" class="keyColor">1   </tspan>: <tspan class="valueColor">-3,794</tspan>| <tspan class="keyColor">-3,794</tspan>: <tspan class="valueColor">3,992++</tspan> (<tspan class="addColor">7,786--</tspan>, <tspan class="delColor">71,067--</tspan>)
+<tspan x="370" y="490" class="keyColor">2</tspan>: <tspan class="valueColor">5 </tspan> {<tspan class="keyColor">107    </tspan>: <tspan class="valueColor">8 </tspan>}  | <tspan class="keyColor">109    </tspan>: <tspan class="valueColor">-3,834</tspan>| <tspan class="keyColor">2</tspan>: <tspan class="valueColor">7,505--</tspan>
+<tspan x="370" y="510" class="keyColor">1   </tspan>: <tspan class="valueColor">-3,794</tspan>| <tspan class="keyColor">-3,794</tspan>: <tspan class="valueColor">3,997++</tspan> (<tspan class="addColor">7,791--</tspan>, <tspan class="delColor">71,067--</tspan>)
 </text>
   
 </svg>
